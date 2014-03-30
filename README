@@ -1,0 +1,17 @@
+Scrapes the pages and resources on a domain, starting from the provided URL.
+Local directory structure will mimic the URL paths as closely as possible.
+Inspects the HTML pages for src and href attributes.
+
+Usage: usage = scrape.py OPTIONS domain url
+
+Options:
+  -h, --help  show the help message and exit
+  --out  output directory, if not provided, will use working directory
+
+Examples:
+
+Scrape the google.com domain, starting at http://google.com/:
+  python ./scrape.py google.com http://google.com/  
+
+Scrape the github.com domain, store in the provided directory:
+  python ./scrape.py --out ./github github.com http://github.com/
